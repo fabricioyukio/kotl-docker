@@ -18,7 +18,7 @@ services:
       - ../api:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
     links:
-      - database
+      - db
       - redis
     networks:
       - app-network
@@ -30,8 +30,8 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "80:80"
-      - "443:443"
+      - "8095:80"
+      - "4430:443"
     volumes:
       - ../api:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
@@ -59,9 +59,10 @@ services:
 
   #Redis service
   redis:
+    container_name: redis
     image: redis:5.0.7
     ports:
-          - "6382:6379"
+          - "6379:6379"
 
 #Docker Networks
 networks:
