@@ -11,12 +11,15 @@ services:
     restart: unless-stopped
     tty: true
     environment:
-      SERVICE_NAME: app
+      SERVICE_NAME: api
       SERVICE_TAGS: dev
     working_dir: /var/www
     volumes:
       - ../api:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    links:
+      - database
+      - redis
     networks:
       - app-network
 
@@ -44,8 +47,8 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      MYSQL_DATABASE: kotl
+      MYSQL_ROOT_PASSWORD: kotl
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
@@ -53,6 +56,12 @@ services:
       - ./mysql/my.ini:/etc/mysql/my.cnf
     networks:
       - app-network
+
+  #Redis service
+  redis:
+    image: redis:5.0.7
+    ports:
+          - "6382:6379"
 
 #Docker Networks
 networks:
