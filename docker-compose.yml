@@ -15,7 +15,7 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www
     volumes:
-      - ../api:/var/www
+      - ${WEB_API_DIR}:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
     links:
       - db
@@ -33,7 +33,7 @@ services:
       - "8095:80"
       - "4430:443"
     volumes:
-      - ../api:/var/www
+      - api:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
       - app-network
@@ -54,7 +54,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - dbdata:/var/lib/mysql/
+      - ./mysql/dbdata:/var/lib/mysql/
       - ./mysql/my.ini:/etc/mysql/my.cnf
     networks:
       - app-network
@@ -70,7 +70,4 @@ services:
 networks:
   app-network:
     driver: bridge
-#Volumes
-volumes:
-  dbdata:
-    driver: local
+
