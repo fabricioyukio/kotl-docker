@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="assets/project.css">
+
 # Infrastructure
 
 <p align="center"><img src="assets/docker_logo.svg" width="300" alt="This project uses Docker" /></p>
