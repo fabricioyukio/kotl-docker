@@ -55,7 +55,7 @@ This project is open-sourced software licensed under the [MIT license](https://o
 
 ## Made with
 
-<p align="center"><a href="https://code.visualstudio.com/" target="_blank"><img src="assets/vscode_icon.svg?raw=true"/></a></p>
+<p align="center"><a href="https://code.visualstudio.com/" target="_blank"><img src="assets/vscode_icon.svg"/></a></p>
 
 ## Learning Docker
 
