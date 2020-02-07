@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="assets/project.css">
 # Infrastructure
 
-<p align="center"><img src="img/docker_logo.svg" width="300" alt="This project user Dockerx" /></p>
+<p align="center"><img src="assets/docker_logo.svg" width="300" alt="This project user Dockerx" /></p>
 
 ## About
 
@@ -35,9 +36,12 @@ A given applicant must apply for the elections by registering his **name** and *
 | +-iOS Mobile App Repo*
 ```
 
-**✱** Those are stretch goals if I do have time and patience to do so
+**✱** Those are stretch goals that I'll try to achieve if I do have time and patience to do so
 
-To develop the project, you mut creat a folder for it and then subfolders with the other repositories.
+To develop the project, you must create a folder for it and then subfolders with the repositories.
+
+### PHP
+Once this project is UP, it is already running PHP on port 80 ([localhost](http://localhost)), so just edit the PHP files you want and it's ready to go! Meaning: there is no need to run something like _php artisan serve --port=80_
 
 ### Future features
 
@@ -51,11 +55,7 @@ This project is open-sourced software licensed under the [MIT license](https://o
 
 ## Made with
 
-<p align="center"><img src="img/vscode_icon.svg?raw=true"/></p>
-
-<p align="center">
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+<p align="center"><a href="https://code.visualstudio.com/" target="_blank"><img src="assets/vscode_icon.svg?raw=true"/></a></p>
 
 ## Learning Docker
 
