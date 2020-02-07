@@ -1,0 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700);
+@import url(http://fonts.googleapis.com/css?family=Arimo:700,700italic);
+
+body {
+  .entry-content {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    h1,h2,h3,h4,h5,h6,.title {
+      font-family: 'Arimo';
+    }  
+  }
+}
