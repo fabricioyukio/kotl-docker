@@ -47,8 +47,10 @@ services:
     ports:
       - "3306:3306"
     environment:
+      MYSQL_ROOT_PASSWORD: kotl_as_root
       MYSQL_DATABASE: kotl
-      MYSQL_ROOT_PASSWORD: kotl
+      MYSQL_USER: kotl
+      MYSQL_PASSWORD: kotl
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
@@ -62,7 +64,7 @@ services:
     container_name: redis
     image: redis:5.0.7
     ports:
-          - "6379:6379"
+      - "6379:6379"
 
 #Docker Networks
 networks:
