@@ -7,7 +7,7 @@
 This repository is a part of a _show off_ project named "**King of the Lunch**"
 ("Rei do Lanche" em Português).
 
-Every day there will be an election for applicants for the title "King of the Lunch". Such an election is open for voting between 10:00 am and 12:00 pm. Then at 12:01 pm the votes are counted, and a new King is elected (although one can be elected King more than once).
+Every day there will be an election for applicants for the title "King of the Lunch". Such an election is open for voting between 10:00 am and 12:00 pm. Then at 12:01 pm, the votes are counted, and a new King is elected (although one can be elected King more than once).
 
 A given applicant must apply for the elections by registering his **name** and **e-mail** (only one applicant per e-mail is permitted).
 
@@ -40,12 +40,35 @@ A given applicant must apply for the elections by registering his **name** and *
 To develop the project, you must create a folder for it and then subfolders with the repositories.
 
 ### PHP
-Once this project is UP, it is already running PHP on port 80 ([localhost](http://localhost)), so just edit the PHP files you want and it's ready to go! Meaning: there is no need to run something like _php artisan serve --port=80_
+Once this project is UP, it is already running PHP on port 80 ([localhost](http://localhost)), so just edit the PHP files you want and it's ready to go! Meaning: there is no need to run something like 
+
+```bash
+$ php artisan serve --port=80
+```
+### MySQL
+
+Also, there is a MySQL Instance on port 3306, already running.
+
+### Redis
+
+Redis is operating in its respective usual port (6379).
+
+### Frontends
+
+The main frontend project is **Webapp**.
+
+For further information, please take a moment to check their respective repositories.
 
 ### Future features
 
-* Configure application if it should open voting in now work days.
+* Configure application if it should open voting in now workdays.
 * Ask for some id (email, Facebook id,...) to prevent the same user to vote more than once.
+
+## Running the project
+
+As aforementioned, this project uses Docker.
+
+
 
 
 ## License
