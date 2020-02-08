@@ -15,9 +15,9 @@ A given applicant must apply for the elections by registering his **name** and *
 
 ```
 +-KotL Project
-| +-Infrastructure Repo
-|     img
-|     |-{image files to illustrate README.md}
+| +-kotl-docker(Infrastructure Repo, this project)
+|     assetd
+|     |-{files referenced in README.md}
 |
 |     mysql
 |     |-{config files for DB}
@@ -28,11 +28,10 @@ A given applicant must apply for the elections by registering his **name** and *
 |     php
 |     |- { config files for PHP }
 |
-|
-| +-Api Repo
-| +-Web App Repo
-| +-Android Mobile App Repo*
-| +-iOS Mobile App Repo*
+| +-kotl-api-php (Api Repo)
+| +-kotl-web (Web App Repo)
+| +-kotl-mobile-android (Android Mobile App Repo*)
+| +-kotl-mobile-ios (iOS Mobile App Repo*)
 ```
 
 **✱** Those are stretch goals that I'll try to achieve if I do have time and patience to do so
@@ -43,8 +42,9 @@ To develop the project, you must create a folder for it and then subfolders with
 Once this project is UP, it is already running PHP on port 80 ([localhost](http://localhost)), so just edit the PHP files you want and it's ready to go! Meaning: there is no need to run something like 
 
 ```bash
-$ php artisan serve --port=80
+php artisan serve --port=80
 ```
+
 ### MySQL
 
 Also, there is a MySQL Instance on port 3306, already running.
@@ -68,8 +68,29 @@ For further information, please take a moment to check their respective reposito
 
 As aforementioned, this project uses Docker.
 
+### Requirements
 
+A computer - Any machine capable of running **docker**, **php** and **mysql** will do.
 
+[Docker](https://docs.docker.com/) - make sure it is installed and running.
+
+[Sendgrid](https://sendgrid.com/docs/api-reference) API Key - set it on "_kotl-api/**.env**_" file.
+
+#### Set .env
+
+On **this project** folder, copy .env.example file to .env
+
+```bash
+cp .env.example .env
+```
+
+Set parameters **WEB_APP_DIR** and **WEB_API_DIR** to correspond to *kotl-web-app* and *kotl-api-php* directories paths, relative to *docker-compose* file.
+
+##### Raise the instances for API, Redis and MySQL
+
+```bash
+
+```
 
 ## License
 
