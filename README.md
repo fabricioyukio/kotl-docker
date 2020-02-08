@@ -16,7 +16,7 @@ A given applicant must apply for the elections by registering his **name** and *
 ```
 +-KotL Project
 | +-kotl-docker(Infrastructure Repo, this project)
-|     assetd
+|     assets
 |     |-{files referenced in README.md}
 |
 |     mysql
@@ -74,7 +74,7 @@ A computer - Any machine capable of running **docker**, **php** and **mysql** wi
 
 [Docker](https://docs.docker.com/) - make sure it is installed and running.
 
-[Sendgrid](https://sendgrid.com/docs/api-reference) API Key - set it on "_kotl-api/**.env**_" file.
+[Sendgrid](https://sendgrid.com/docs/api-reference) API Key - set it on API's **.env** ("kotl-api/.env") file.
 
 #### Set .env
 
@@ -84,13 +84,26 @@ On **this project** folder, copy .env.example file to .env
 cp .env.example .env
 ```
 
-Set parameters **WEB_APP_DIR** and **WEB_API_DIR** to correspond to *kotl-web-app* and *kotl-api-php* directories paths, relative to *docker-compose* file.
+Set parameters **WEB_APP_DIR** and **WEB_API_DIR** to correspond to *kotl-web-app* and *kotl-api-php* directories paths, **relative** to the *docker-compose* file.
 
 ##### Raise the instances for API, Redis and MySQL
 
-```bash
+Use docker-compose to put API to work.
 
+Just open a terminal (iterm, zsh, git bash,...) window
+
+```bash
+docker-compose up -d
+# do not close the terminal
 ```
+
+###### Deactivate
+
+```bash
+# just run in the same window you raised API
+docker-compose down
+```
+
 
 ## License
 
