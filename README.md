@@ -1,4 +1,4 @@
-# Infrastructure
+# Kotl Infrastructure
 
 <p align="center"><img src="assets/docker_logo.svg" width="300" alt="This project uses Docker" /></p>
 
@@ -14,7 +14,7 @@ A given applicant must apply for the elections by registering his **name** and *
 ## Project Structure
 
 ```
-+-KotL Project
++-KotL Project Folder
 | +-kotl-docker(Infrastructure Repo, this project)
 |     assets
 |     |-{files referenced in README.md}
@@ -140,7 +140,10 @@ This project is open-sourced software licensed under the [MIT license](https://o
 
 ## Made with
 
-<p align="center"><a href="https://code.visualstudio.com/" target="_blank"><img src="assets/vscode_icon.svg"/></a></p>
+[![vscode][1]][2]
+
+[1]: assets/vscode_icon.svg
+[2]: https://code.visualstudio.com/ "Get VSCode"
 
 ## Learning Docker
 
