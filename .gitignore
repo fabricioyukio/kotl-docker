@@ -9,4 +9,6 @@
 *.code-workspace
 .vscode/settings.json
 
+mysql/dbdata
+
 .env
