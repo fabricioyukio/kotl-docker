@@ -30,7 +30,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "8095:80"
+      - "80:80"
       - "4430:443"
     volumes:
       - ${WEB_API_DIR}:/var/www
